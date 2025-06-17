@@ -77,18 +77,69 @@ const mockData = {
       { name: 'Kesariya', artist: 'Brahmāstra', url: 'https://open.spotify.com/track/50' }
     ]
   },
-  Hollywood: {
-    Happy: [
-      { name: 'Happy', artist: 'Pharrell Williams', url: 'https://open.spotify.com/track/51' },
-      { name: 'Can’t Stop the Feeling!', artist: 'Justin Timberlake', url: 'https://open.spotify.com/track/52' },
-      { name: 'Uptown Funk', artist: 'Mark Ronson ft. Bruno Mars', url: 'https://open.spotify.com/track/53' },
-      { name: 'Shut Up and Dance', artist: 'WALK THE MOON', url: 'https://open.spotify.com/track/54' },
-      { name: 'Best Day Of My Life', artist: 'American Authors', url: 'https://open.spotify.com/track/55' },
-      { name: 'On Top of the World', artist: 'Imagine Dragons', url: 'https://open.spotify.com/track/56' },
-      { name: 'I Gotta Feeling', artist: 'The Black Eyed Peas', url: 'https://open.spotify.com/track/57' },
-      { name: 'Wake Me Up', artist: 'Avicii', url: 'https://open.spotify.com/track/58' },
-      { name: 'Counting Stars', artist: 'OneRepublic', url: 'https://open.spotify.com/track/59' },
-      { name: 'Blinding Lights', artist: 'The Weeknd', url: 'https://open.spotify.com/track/60' }
+Hollywood: {
+  Happy: [
+    { name: 'Happy', artist: 'Pharrell Williams', url: 'https://open.spotify.com/track/60nZcImufyMA1MKQY3dcCH' },
+    { name: 'Can’t Stop the Feeling!', artist: 'Justin Timberlake', url: 'https://open.spotify.com/track/6JV2JOEocMgcZxYSZelKcc' },
+    { name: 'Uptown Funk', artist: 'Mark Ronson ft. Bruno Mars', url: 'https://open.spotify.com/track/32OlwWuMpZ6b0aN2RZOeMS' },
+    { name: 'Shut Up and Dance', artist: 'WALK THE MOON', url: 'https://open.spotify.com/track/3XVBdLihbNbxUwZosxcGuJ' },
+    { name: 'Best Day Of My Life', artist: 'American Authors', url: 'https://open.spotify.com/track/0yW7w8F2TV054ZdJFpsZeJ' },
+    { name: 'On Top of the World', artist: 'Imagine Dragons', url: 'https://open.spotify.com/track/4VNCYfAjo5Pqocgz9SVY5g' },
+    { name: 'I Gotta Feeling', artist: 'The Black Eyed Peas', url: 'https://open.spotify.com/track/7qiZfU4dY1lWllzX7mPBI3' },
+    { name: 'Wake Me Up', artist: 'Avicii', url: 'https://open.spotify.com/track/4kLLKC6I3HKAiJCwP64rY6' },
+    { name: 'Counting Stars', artist: 'OneRepublic', url: 'https://open.spotify.com/track/7DT5tdI9O1k7F4blJYpFOZ' },
+    { name: 'Blinding Lights', artist: 'The Weeknd', url: 'https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b' }
+  ],
+  Sad: [
+    { name: 'Someone Like You', artist: 'Adele', url: 'https://open.spotify.com/track/4kffe26Fpiu16D46hQtzKC' },
+    { name: 'Let Her Go', artist: 'Passenger', url: 'https://open.spotify.com/track/7Cuk8AT0RtuZC2Z3E9E1oB' },
+    { name: 'Jar of Hearts', artist: 'Christina Perri', url: 'https://open.spotify.com/track/06OVEaG2GjBacP9N6ylXOR' },
+    { name: 'Stay With Me', artist: 'Sam Smith', url: 'https://open.spotify.com/track/3KkXRkHbMCARz0aVfEt68P' },
+    { name: 'Fix You', artist: 'Coldplay', url: 'https://open.spotify.com/track/7B5E6v9FnORfUTwZuuzMPl' },
+    { name: 'Hurt', artist: 'Johnny Cash', url: 'https://open.spotify.com/track/2aA7RkgauQAR8v2LCsspRv' },
+    { name: 'Someone You Loved', artist: 'Lewis Capaldi', url: 'https://open.spotify.com/track/7z7JgZRXGRAucdcgqfYFTY' },
+    { name: 'All I Want', artist: 'Kodaline', url: 'https://open.spotify.com/track/1g1atzXE1eOUE8j6p61fRs' },
+    { name: 'Say Something', artist: 'A Great Big World & Christina Aguilera', url: 'https://open.spotify.com/track/7kWP19mQXSwGJaIWVjZJdp' },
+    { name: 'When I Was Your Man', artist: 'Bruno Mars', url: 'https://open.spotify.com/track/6kH9SV1wl0NrTdpZgVY2XW' }
+  ],
+  Chill: [
+    { name: 'Sunflower', artist: 'Post Malone & Swae Lee', url: 'https://open.spotify.com/track/3KkXRkHbMCARz0aVfEt68P' },
+    { name: 'Electric Feel', artist: 'MGMT', url: 'https://open.spotify.com/track/7yxiOd4oYM96yILmwbOix4' },
+    { name: 'Budapest', artist: 'George Ezra', url: 'https://open.spotify.com/track/2VK1qcMpkbL3L7uWcXBdto' },
+    { name: 'Put It All On Me', artist: 'Ed Sheeran', url: 'https://open.spotify.com/track/2vnCQA0hCyYry3W3agAOoM' },
+    { name: 'Yellow', artist: 'Coldplay', url: 'https://open.spotify.com/track/11dFghVXANMlKmJXsNCbNl' },
+    { name: 'Riptide', artist: 'Vance Joy', url: 'https://open.spotify.com/track/3ZCTVFBt2Brf31RLEnCkWJ' },
+    { name: 'Someone To You', artist: 'Banners', url: 'https://open.spotify.com/track/6ZHevI943kaVeIxd4U6bEj' },
+    { name: 'Holocene', artist: 'Bon Iver', url: 'https://open.spotify.com/track/4y6aHjDUabRtIdbqRi6VEr' },
+    { name: 'Cigarette Daydreams', artist: 'Cage the Elephant', url: 'https://open.spotify.com/track/3BqTaPOqA8YBfsz4xm1knp' },
+    { name: 'Breathe Me', artist: 'Sia', url: 'https://open.spotify.com/track/6fnndZ6RVPYSRxwLac0Kwx' }
+  ],
+  Energetic: [
+    { name: 'Can’t Hold Us', artist: 'Macklemore & Ryan Lewis', url: 'https://open.spotify.com/track/3m8KGkGxxjMxHG8wTQwFFR' },
+    { name: 'Believer', artist: 'Imagine Dragons', url: 'https://open.spotify.com/track/0pqnGHJpmpxLKifKRmU6o8' },
+    { name: 'Don’t Stop Me Now', artist: 'Queen', url: 'https://open.spotify.com/track/5t1QoQPpwLkB0rA6GReM1B' },
+    { name: 'Eye of the Tiger', artist: 'Survivor', url: 'https://open.spotify.com/track/2KH16WveTQWT6KOG9Rg6e2' },
+    { name: 'Thunder', artist: 'Imagine Dragons', url: 'https://open.spotify.com/track/2kaHxO6gUWZ8m0ucN6tMGW' },
+    { name: 'Happy Now', artist: 'Kygo & Sandro Cavazza', url: 'https://open.spotify.com/track/0h4Sb019wMH5ShZKnS0BYe' },
+    { name: 'Locked Out of Heaven', artist: 'Bruno Mars', url: 'https://open.spotify.com/track/2eRyUmPdZzuiTVvRrMLDfD' },
+    { name: 'High Hopes', artist: 'Panic! At The Disco', url: 'https://open.spotify.com/track/7lXNUjfyQXUxEnWVNIDES7' },
+    { name: 'Raise Your Glass', artist: 'P!nk', url: 'https://open.spotify.com/track/6DcHb94KLu4Tt2p8tz6Aqx' },
+    { name: 'Firework', artist: 'Katy Perry', url: 'https://open.spotify.com/track/00aWjryQcrdE9joJHAIG1G' }
+  ],
+  Romantic: [
+    { name: 'All of Me', artist: 'John Legend', url: 'https://open.spotify.com/track/1S0jjzjUsIlWdqmQ3RAlmM' },
+    { name: 'Perfect', artist: 'Ed Sheeran', url: 'https://open.spotify.com/track/0tgVpDi06FyKpA1z0VMD4v' },
+    { name: 'Shallow', artist: 'Lady Gaga & Bradley Cooper', url: 'https://open.spotify.com/track/1V4N9YQQoQzBphAn3e6j3Q' },
+    { name: 'My Heart Will Go On', artist: 'Celine Dion', url: 'https://open.spotify.com/track/1uMcsdJC20wWlXAloyDIXT' },
+    { name: 'Can’t Help Falling in Love', artist: 'Elvis Presley', url: 'https://open.spotify.com/track/3yIi32dfNvbSRcPt1FOzRN' },
+    { name: 'I Will Always Love You', artist: 'Whitney Houston', url: 'https://open.spotify.com/track/3JWTaaS7Ld5w54k1tkU6P1' },
+    { name: 'Unchained Melody', artist: 'The Righteous Brothers', url: 'https://open.spotify.com/track/2tUBqZG2AbRi7Q0BIrVrEj' },
+    { name: 'Endless Love', artist: 'Diana Ross & Lionel Richie', url: 'https://open.spotify.com/track/5MNDe1tjGbICMxyqjDPYNZ' },
+    { name: 'Just the Way You Are', artist: 'Bruno Mars', url: 'https://open.spotify.com/track/7qiZfU4dY1lWllzX7mPBI3' },
+    { name: 'Because You Loved Me', artist: 'Celine Dion', url: 'https://open.spotify.com/track/3wC7F2PzlxiNt7cOljF3Nu' }
+  ],
+}
+
     ]
   }
 };
