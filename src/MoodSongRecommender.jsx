@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { Button } from './components/ui/button';
+import { Card, CardContent } from './components/ui/card';
 
 const moodOptions = ['Happy', 'Sad', 'Chill', 'Energetic', 'Romantic'];
 const languageOptions = ['Bollywood', 'Hollywood'];
@@ -169,7 +169,7 @@ export default function MoodSongRecommender() {
             {songs.map((song, idx) => (
               <Card key={idx}>
                 <CardContent className="p-4">
-                  <p className="font-medium">🎶 {song.name}</p>
+                  <p className="font-medium text-black">🎶 {song.name}</p>
                   <p className="text-sm text-muted-foreground">by {song.artist}</p>
                   <a
                     href={song.url}
