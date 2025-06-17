@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -90,7 +90,6 @@ const mockData = {
       { name: 'Counting Stars', artist: 'OneRepublic', url: 'https://open.spotify.com/track/59' },
       { name: 'Blinding Lights', artist: 'The Weeknd', url: 'https://open.spotify.com/track/60' }
     ]
-    // You can expand the other moods here in a similar way if needed
   }
 };
 
@@ -99,17 +98,23 @@ export default function MoodSongRecommender() {
   const [selectedLanguage, setSelectedLanguage] = useState('');
   const [songs, setSongs] = useState([]);
 
-  const fetchSongs = (mood, language) => {
+  const fetchSongs = useCallback((mood, language) => {
     const result = mockData[language]?.[mood] || [];
     const shuffled = shuffleArray(result).slice(0, 10);
     setSongs(shuffled);
-  };
+  }, []);
 
   useEffect(() => {
     if (selectedMood && selectedLanguage) {
       fetchSongs(selectedMood, selectedLanguage);
     }
-  }, [selectedMood, selectedLanguage]);
+  }, [selectedMood, selectedLanguage, fetchSongs]);
+
+  useEffect(() => {
+    if (songs.length > 0) {
+      document.getElementById('playlist')?.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [songs]);
 
   const handleExportPlaylist = () => {
     const songTitles = songs.map(song => `${song.name} by ${song.artist}`).join('\n');
@@ -121,10 +126,6 @@ export default function MoodSongRecommender() {
     link.click();
     document.body.removeChild(link);
   };
-  
-console.log("Selected Mood:", selectedMood);
-console.log("Selected Language:", selectedLanguage);
-console.log("Songs:", songs);
 
   return (
     <div className="p-6 max-w-xl mx-auto">
@@ -136,9 +137,11 @@ console.log("Songs:", songs);
             key={mood}
             variant={selectedMood === mood ? 'default' : 'outline'}
             onClick={() => {
-              setSelectedMood(mood);
-              setSelectedLanguage('');
-              setSongs([]);
+              if (selectedMood !== mood) {
+                setSelectedMood(mood);
+                setSelectedLanguage('');
+                setSongs([]);
+              }
             }}
           >
             {mood}
@@ -160,9 +163,9 @@ console.log("Songs:", songs);
       {selectedLanguage && songs.length > 0 && (
         <>
           <h2 className="text-xl font-semibold mb-2">Playlist: {selectedMood} ({selectedLanguage})</h2>
-          <Button onClick={handleExportPlaylist} className="mb-4">⬇️ Export Playlist</Button>
-          <Button onClick={() => fetchSongs(selectedMood, selectedLanguage)} className="mb-4 ml-2">🔁 Refresh</Button>
-          <div className="grid gap-3">
+          <Button onClick={handleExportPlaylist} aria-label="Download Playlist" className="mb-4">⬇️ Export Playlist</Button>
+          <Button onClick={() => fetchSongs(selectedMood, selectedLanguage)} className="mb-4 ml-2" aria-label="Refresh Playlist">🔁 Refresh</Button>
+          <div id="playlist" className="grid gap-3">
             {songs.map((song, idx) => (
               <Card key={idx}>
                 <CardContent className="p-4">
@@ -181,6 +184,10 @@ console.log("Songs:", songs);
             ))}
           </div>
         </>
+      )}
+
+      {selectedLanguage && songs.length === 0 && (
+        <p className="text-sm text-red-500 mt-2">No songs found for this combination.</p>
       )}
     </div>
   );
