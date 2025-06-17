@@ -1,12 +1,10 @@
-import React from 'react'
+import React from 'react';
+import MoodSongRecommender from './MoodSongRecommender';
 
-const App = () => {
+export default function App() {
   return (
-    <div style={{ textAlign: 'center', padding: '2rem' }}>
-      <h1>🎵 Mood-Based Song Recommender 🎵</h1>
-      <p>Start by selecting your mood!</p>
+    <div>
+      <MoodSongRecommender />
     </div>
-  )
+  );
 }
-
-export default App
