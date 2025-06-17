@@ -121,11 +121,6 @@ export default function MoodSongRecommender() {
     link.click();
     document.body.removeChild(link);
   };
-useEffect(() => {
-  if (selectedMood && selectedLanguage) {
-    fetchSongs(selectedMood, selectedLanguage);
-  }
-}, [selectedMood, selectedLanguage]);
   
 console.log("Selected Mood:", selectedMood);
 console.log("Selected Language:", selectedLanguage);
